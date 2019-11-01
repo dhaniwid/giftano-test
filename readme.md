@@ -20,19 +20,51 @@ Please access https://giftano-test.herokuapp.com/. To access the product and cat
 ## Add new data
 For example:
 
-**Category
-Use this link https://giftano-test.herokuapp.com/api/category
-Then, insert data in the form (form-data, x-www-form-urlencoded) by using following columns:
+**Category**
+1. Use this link https://giftano-test.herokuapp.com/api/category
+2. Select GET
+3. Insert data in the form (form-data, x-www-form-urlencoded) by using following columns:
 - name
 - status
 - description
+4. Click SEND
 
-**Product
-https://giftano-test.herokuapp.com/api/product
-Then, insert data in the form (form-data, x-www-form-urlencoded):
+**Product**
+1. Go to link https://giftano-test.herokuapp.com/api/product
+2. Select GET
+3. Insert data in the form (form-data, x-www-form-urlencoded):
 - name
 - status
 - category_id
 - description
 - price
+4. Click SEND
 
+## Update data
+**Category**
+1. Go to https://giftano-test.herokuapp.com/api/category/{id}
+Please change {id} into any existing category id
+2. Select PUT
+3. Insert data in the form (form-data, x-www-form-urlencoded) by using following columns:
+- name
+- status
+- description
+4. Click SEND
+
+**Product**
+1. Go to https://giftano-test.herokuapp.com/api/product/{id}
+Please change {id} into any existing product id
+2. Select PUT
+3. Insert data in the form (form-data, x-www-form-urlencoded) by using following columns:
+- name
+- status
+- category_id
+- description
+- price
+4. Click SEND
+
+## Delete data
+**Category && Product**
+1. Go to https://giftano-test.herokuapp.com/api/product/{id} for product, https://giftano-test.herokuapp.com/api/category/{id} for category. Please change {id} accordingly.
+2. Select DELETE
+3. Click SEND
