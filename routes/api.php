@@ -19,15 +19,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => 'category'], function(){
     Route::get('/', 'CategoryController@index')->name('category');
-    Route::post('/{category}', 'CategoryController@create')->name('category.create');
+    Route::post('/', 'CategoryController@create')->name('category.create');
     Route::put('/{id}', 'CategoryController@update')->name('category.update');
     Route::delete('/{id}', 'CategoryController@delete')->name('category.delete');
 });
 
-Route::group(['prefix' => 'posts'], function() {
-    Route::get('/', 'PostController@index')->name('posts');
-    Route::get('/{post}', 'PostController@show')->name('posts.show');
-    Route::post('/', 'PostController@store')->name('posts.store');
-    Route::put('/{post}', 'PostController@update')->name('posts.update');
-    Route::delete('/{post}', 'PostController@delete')->name('posts.delete');
+Route::group(['prefix' => 'product'], function(){
+    Route::get('/', 'ProductController@index')->name('product');
+    Route::post('/', 'ProductController@create')->name('product.create');
+    Route::put('/{id}', 'ProductController@update')->name('product.update');
+    Route::delete('/{id}', 'ProductController@delete')->name('product.delete');
 });
